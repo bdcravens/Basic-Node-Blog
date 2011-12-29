@@ -1,0 +1,12 @@
+form(action='/', method='post')
+	div
+		label Title of blog post
+			input(name='posttitle',length='70')
+	div
+		label Body of blog post
+			textarea(name='postbody',cols='55',rows='12')
+	div 
+		label Tags
+			input(name='tags',length='30')
+	div 
+		input.btn.primary(type='submit', value='Save Post')

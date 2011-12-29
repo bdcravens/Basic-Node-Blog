@@ -1,0 +1,38 @@
+!!!
+html
+	head
+		title billy.io - The Blog of Billy Cravens
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		div.topbar
+			div.fill
+				div.container
+					a.brand(href='#Project name') Billy Cravens :: billy.io
+					ul.nav
+						li.active
+							a(href='#') Home
+						li
+							a(href='#about') About
+						li
+							a(href='#contact') Contact
+					//
+						form.pull-right(action='')
+							input.input-small(type='text', placeholder='Username')
+							input.input-small(type='password', placeholder='Password')
+							button.btn(type='submit') Sign in
+		div.container
+			div.content
+				div.page-header
+					h1= title
+						small Supporting text or tagline
+				div.row
+					div.span14
+						h2 Main content
+						div!= body
+					//
+						div.span4
+							h3 Secondary content
+			footer
+				p &copy; Billy Cravens 2000-2012
+

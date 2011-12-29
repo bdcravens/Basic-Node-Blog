@@ -1,0 +1,28 @@
+each post in posts
+	h2 
+		a(href='post/#{post._id}')#{post.title}
+	h3= post.date
+	h4= post._id
+	article!= post.body
+	each tag in post.tags
+		p tag
+	hr
+
+.pagination
+	ul
+		li.prev
+			a(href='/') &larr; Previous
+		li.active
+			a(href='#') 1
+		li
+			a(href='#') 2
+		li.next
+			a(href='#') Next &rarr;
+- var pages = parseInt(postCount/10) + ((postCount % 10 > 0) ? 1 : 0);	
+- if (pageId==undefined)  pageId = "123";
+
+p #{pages}	
+p #{pageId}	
+- for (i=1;i<=pages;i++)
+	span #{i}
+em #{postCount}
